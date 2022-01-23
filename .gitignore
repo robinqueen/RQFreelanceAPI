@@ -1,0 +1,11 @@
+﻿RQFreelanceAPI/.config
+RQFreelanceAPI/Properties
+RQFreelanceAPI/obj
+RQFreelanceAPI/bin
+RQFreelanceAPI/obj
+RQFreelanceAPI/bin
+*.suo
+.vs/RQFreelanceAPI/DesignTimeBuild
+.vs/RQFreelanceAPI/v17
+RQFreelanceAPI/dbConfigIgnore.json
+.vs
