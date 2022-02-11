@@ -9,3 +9,5 @@ RQFreelanceAPI/bin
 .vs/RQFreelanceAPI/v17
 RQFreelanceAPI/dbConfigIgnore.json
 .vs
+RQFreelanceAPI/appsettings.json
+WebApplication1/obj
