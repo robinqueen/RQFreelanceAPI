@@ -20,10 +20,37 @@ namespace RQFreelanceAPI.Controllers
             _housingPropertyRepo = housingPropertyRepo;
         }
 
+        [HttpGet("GetAllHousingPropertiesTest")]
+        public async Task<List<HousingProperty>> GetAllHousingPropertiesTest()
+        {
+            HousingProperty p1 = new HousingProperty();
+            p1.ID = 1;
+            p1.AddressLine1 = "Test1 ";
+
+
+            HousingProperty p2 = new HousingProperty();
+            p1.ID = 1;
+            p1.AddressLine1 = "Test1 ";
+
+            List<HousingProperty> l = new List<HousingProperty>();
+            l.Add(p1);
+            l.Add(p2);
+            return l;
+        }
+
         [HttpGet("GetAllHousingProperties")]
         public async Task<List<HousingProperty>> GetAllHousingProperties()
         {
-            return await _housingPropertyRepo.GetHousingProperties();
+            List<HousingProperty> res = new List<HousingProperty>();
+            try
+            {
+                res = await _housingPropertyRepo.GetHousingProperties();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return res;
         }
 
         [HttpGet("GetAllHousingPropertiesByPropertyType/{type}")]

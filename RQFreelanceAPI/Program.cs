@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<DapperContext>();
 builder.Services.AddScoped<IHousingPropertyRepo, HousingPropertyRepo>();
+builder.Services.AddScoped<ITwerkleRepo, TwerkleRepo>();
 
 
 // Add services to the container.
