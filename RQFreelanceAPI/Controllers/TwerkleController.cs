@@ -31,5 +31,27 @@ namespace RQFreelanceAPI.Controllers
             return res;
         }
 
+        [HttpGet("GetRandomWord")]
+        public async Task<string> GetRandomWord()
+        {
+            string res = "";
+
+            try
+            {
+                res = await _twerkleRepo.GetWordOfDay();
+            }
+            catch(Exception ex)
+            {
+                res = ex.Message + Environment.NewLine + ex.InnerException + Environment.NewLine + ex.StackTrace;
+            }
+            
+            return res;
+        }
+
+        [HttpGet("GetRandomWord2")]
+        public async Task<string> GetRandomWord2()
+        {
+            return "Random2";
+        }
     }
 }
